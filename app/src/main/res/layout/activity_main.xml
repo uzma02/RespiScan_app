@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/buttonStartRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onStartRecording"
+        android:text="Start Recording"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStopRecording"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStopRecording"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onStopRecording"
+        android:text="Stop Recording"
+        app:layout_anchor="@+id/textViewOutput"
+        app:layout_anchorGravity="top|center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonStartRecording" />
+
+    <TextView
+        android:id="@+id/textViewOutput"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Predicted Disease: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSpec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textViewSpec"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Place phone mic at the following locations"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTrachea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOutput" />
+
+    <TextView
+        android:id="@+id/textViewTrachea"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Trachea: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpec" />
+
+    <TextView
+        android:id="@+id/textViewAL"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Anterior Left: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTrachea" />
+
+    <TextView
+        android:id="@+id/textViewAR"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Anterior Right: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAL" />
+
+    <TextView
+        android:id="@+id/textViewPL"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Posterior Left: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAR" />
+
+    <TextView
+        android:id="@+id/textViewPR"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Posterior Right: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPL" />
+
+    <TextView
+        android:id="@+id/textViewLL"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Lateral Left: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPR" />
+
+    <TextView
+        android:id="@+id/textViewLR"
+        android:layout_width="382dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Lateral Right: "
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStorage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLL" />
+
+    <Button
+        android:id="@+id/buttonStorage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STORAGE"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStartRecording"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLL"
+        android:onClick="onSelectAudioFile"/>
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
